@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv= require("dotenv");
+const cors  = require("cors")
 const usersRoute  = require("./routes/usersRoute");
 const booksRoute = require("./routes/booksRoute")
 const error = require("./middlewares/errorHandlerMiddleware")
@@ -9,6 +10,7 @@ require("./config/dbConnection")();
 const app = express();
 
 //PARSING INCOMING REQUESTS
+app.use(cors())
 app.use(express.json());
 
 
