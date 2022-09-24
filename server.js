@@ -10,6 +10,7 @@ require("./config/dbConnection")();
 const app = express();
 
 //PARSING INCOMING REQUESTS
+// update cors
 app.use(cors())
 app.use(express.json());
 
